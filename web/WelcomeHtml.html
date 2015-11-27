@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Login Page Html</title>
+<link rel="stylesheet" type="text/css" href="BasicPage(OSP).css">
+<script>
+function validateForm()
+{
+	var x = document.forms["form1"]["user"].value;
+	if(x == null || x=="")
+	{
+		alert("Please Enter your user name");
+		return false;
+	}
+	var a = x.indexOf("@");
+	var dot = x.indexOf(".");
+	if(a < 1 || a== null)
+	{
+		alert("Not a valid Email address");
+		return false;
+	}
+	var pass = document.forms["form1"]["password"].value;
+	if(pass == null || pass == "")
+	{
+		alert("Please Enter a vaild password");
+		return false;
+	}
+}
+</script>
+<style type="text/css">
+<!--
+#Layer5 {
+	position:absolute;
+	width:734px;
+	height:618px;
+	z-index:1;
+	left: 6px;
+	top: -760px;
+	background-image:url(20130701-133421-clp-lenovo-exclusive-launch-730x300.jpg);
+}
+#Layer6 {
+	position:absolute;
+	width:294px;
+	height:221px;
+	z-index:13;
+	left: 1142px;
+	top: 294px;
+	font-size:16px;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-weight:200;
+}
+#Layer7 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1;
+	left: 1225px;
+	top: 4px;
+}
+#Layer8 {
+	position:absolute;
+	left:843px;
+	top:177px;
+	width:3px;
+	height:0px;
+	z-index:14;
+}
+-->
+</style>
+</head>
+
+<body>
+<div id="Layer1"></div>
+<div id="Layer2" style="background-color:#666699;">
+  <div id="Layer7">
+    <form id="form2" name="form2" method="post" action="RegisterHtml.html">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="submit" name="Submit2" value="New User Register Here" style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:20px;"/>
+    </form>
+  </div>
+</div>
+<div id="Layer8"></div>
+<div id="Layer3"></div>
+<div id="Layer4"><marquee>ONLINE SHOPPING PORTAL</marquee></div>
+<div id="Layer17">
+ <div id="Layer5"></div>
+</div>
+<div id="Layer6" >
+  <form id="form1" name="form1" method="post" action="LoginServlet">
+    <p>Email ID &nbsp;&nbsp;
+      <input type="text" name="user" />
+  </p>
+    <p>
+      Password&nbsp;&nbsp;
+        <input type="password" name="password" />
+</p>
+    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="submit" name="Submit" value="Log In" onclick="return validateForm()"style="font-family:Georgia, 'Times New Roman', Times, serif;font-size:20px;"/>
+    </p>
+  </form>
+</div>
+</body>
+</html>

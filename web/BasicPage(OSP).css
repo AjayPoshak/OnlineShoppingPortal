@@ -1,0 +1,42 @@
+/* CSS Document */
+
+#Layer1 {
+	position:absolute;
+	width:1500px;
+	height:129px;
+	z-index:1;
+	top: 4px;
+	left: 4px;
+	background-color:#666666;
+}
+#Layer2 {
+	position:absolute;
+	width:1498px;
+	height:831px;
+	z-index:1;
+	top: 131px;
+	background-color:#FFFFFF;
+	left: 4px;
+}
+#Layer4 {
+	position:absolute;
+	width:620px;
+	height:88px;
+	z-index:5;
+	left: 430px;
+	top: 44px;
+	font-size:xx-large;
+	color:#FFFF00;
+}
+
+#Layer17 {
+	position:absolute;
+	left:-1px;
+	top:962px;
+	width:1502px;
+	height:72px;
+	z-index:12;
+	background-color:#999999;
+	color:#FFFFFF;
+
+}

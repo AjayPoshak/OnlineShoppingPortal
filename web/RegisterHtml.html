@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+#Layer1 {
+	position:absolute;
+	left:1px;
+	top:1px;
+	width:1352px;
+	height:131px;
+	z-index:1;
+	background-color:#666666;
+}
+#Layer2 {
+	position:absolute;
+	width:1349px;
+	height:641px;
+	z-index:2;
+	left: 2px;
+	top: 134px;
+	background-color: #666699;
+}
+#Layer3 {
+	position:absolute;
+	width:460px;
+	height:350px;
+	z-index:1;
+	left: 342px;
+	top: 117px;
+}
+#Layer4 {
+	position:absolute;
+	width:620px;
+	height:88px;
+	z-index:5;
+	left: 451px;
+	top: 43px;
+	font-size:xx-large;
+	color:#FFFF00;
+}
+
+</style>
+<script>
+    function validateReg()
+    {
+        var fname = document.forms["registration form"]["firstname"].value;
+        if(fname == null || fname == "")
+        {
+               alert("Enter your first name");
+               return false;
+        }
+        var email = document.forms["registration form"]["email"].value;
+        var a = email.indexOf("@");
+        var dot = email.indexOf(".");
+        if(a < 3 || a == null || email== null || email=="")
+        {
+            alert("Not a valid email");
+            return false;
+
+        }
+        if(dot == null)
+        {
+            alert("Not a valid email");
+            return false;
+        }
+        var pass = document.forms["registration form"]["password"].value;
+        if(pass == null || pass == "")
+        {
+            alert("Enter the password");
+            return false;
+        }
+        //Checking for non-numeric value
+        var mobile = document.forms["registration form"]["mobile"].value;
+        if(mobile == null || mobile == "")
+        {
+            alert("Please Enter value in field:Mobile");
+                return false;
+            }
+         var state = document.forms["registration form"]["state"].value;
+          if(state == "" || state == null)
+          {
+              alert("Enter your State");
+              return false;
+          }
+        var pincode = document.forms["registration form"]["pincode"].value;
+        if(pincode == null || pincode == "")
+        {
+            alert("Please Enter value in field:Pincode");
+                return false;
+            }
+
+    }
+    
+    </script>
+</head>
+<body>
+   <form name="registration form" action="RegisterServlet">
+<div id="Layer1">
+    <div id="Layer4"><marquee>ONLINE SHOPPING PORTAL</marquee>
+</div>
+<div id="Layer2">
+<div id="Layer3"><label>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" name="firstname" size="15" maxlength="20"></label>
+<br>
+<br><label>Email ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="email" size="30" maxlength="40"></label><br>
+<br><label>Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="password" size="25" maxlength="25"></label><br>
+<br><label>City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="city" size="30" maxlength="40"></label><br>
+<br><label>Mobile&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="mobile" size="10" maxlength="10"></label><br>
+<br><label>State&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="state" size="30" maxlength="30"></label><br>
+<br><label>PinCode&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="pincode" size="6" maxlength="6"></label>
+<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="Submit" onClick="return validateReg()"><br>
+</p>
+</div>
+</div>
+</body>
+</html>
